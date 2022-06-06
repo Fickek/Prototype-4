@@ -21,6 +21,9 @@ public class EnemyHard : MonoBehaviour
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
         enemyHardRg.AddForce(lookDirection * speed);
+        //Debug.Log(player.transform.position);
+        //Debug.Log(transform.position);
+        
 
 
         if (transform.position.y < -10)
@@ -36,8 +39,8 @@ public class EnemyHard : MonoBehaviour
         {
             //Rigidbody enemyRg = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 awayFromPlayer = (collision.gameObject.transform.position - transform.position);
-
-            enemyHardRg.AddForce(awayFromPlayer * 30, ForceMode.Impulse);
+            Debug.Log(collision.gameObject.transform.position - transform.position);
+            //enemyHardRg.AddForce(awayFromPlayer * 30, ForceMode.Impulse);
         }
         
     }

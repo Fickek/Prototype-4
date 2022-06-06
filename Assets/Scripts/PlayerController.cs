@@ -57,6 +57,12 @@ public class PlayerController : MonoBehaviour
             
         }
 
+        if(collision.gameObject.CompareTag("EnemyHard"))
+        {
+            Debug.Log("Collided with " + collision.gameObject.name + " with powerup set to" + hasPowerup);
+        }
+
+
     }
 
 }
